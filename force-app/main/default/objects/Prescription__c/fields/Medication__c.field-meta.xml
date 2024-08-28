@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Medication__c</fullName>
+    <description>Meow Parlour</description>
+    <inlineHelpText>Medication being prescribed to the patient animal</inlineHelpText>
+    <label>Medication</label>
+    <referenceTo>Medication__c</referenceTo>
+    <relationshipLabel>Prescriptions</relationshipLabel>
+    <relationshipName>Prescriptions</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

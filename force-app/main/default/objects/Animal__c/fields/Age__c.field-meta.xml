@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age__c</fullName>
+    <description>Meow Parlour</description>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(Date_of_birth__c),&quot;&quot;, 
+
+   TEXT(YEAR(TODAY()) - YEAR(Date_of_birth__c) - If(MONTH(TODAY()) &lt; MONTH(Date_of_birth__c),1,0)) &amp;
+      &quot; year(s), &quot;  &amp;
+
+   TEXT(
+      If(MONTH(TODAY()) &gt;= MONTH(Date_of_birth__c),
+         MONTH(TODAY()) - MONTH(Date_of_birth__c),
+         12 + MONTH(TODAY()) - MONTH(Date_of_birth__c)
+      )
+   ) &amp;
+      &quot; month(s)&quot;
+
+)</formula>
+    <inlineHelpText>Age of the animal</inlineHelpText>
+    <label>Age</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
